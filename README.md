@@ -118,3 +118,6 @@ A friendly AI assistant app that helps with day-to-day tasks. Built with React f
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+
+## Demo link
+https://youtu.be/MOjpNZzwgRA
