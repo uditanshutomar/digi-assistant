@@ -1,0 +1,25 @@
+{
+  "name": "digi-assistant",
+  "version": "1.0.0",
+  "description": "A friendly AI assistant for daily tasks",
+  "main": "backend/dist/index.js",
+  "scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:all": "npm run build:backend && npm run build:frontend && npm run copy:frontend",
+    "copy:frontend": "cp -r frontend/build/* backend/dist/ || mkdir -p backend/dist && cp -r frontend/build/* backend/dist/",
+    "start": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "keywords": ["ai", "assistant", "anthropic", "claude", "react", "nodejs"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
